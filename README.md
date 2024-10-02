@@ -1,6 +1,6 @@
 # 🚗✨ Auto Analytics & Visualization Project ✨🚗
 
-**Author**: [Your Name]
+**Author**: Chance Angelo C. Tan
 
 Welcome to the **Auto Analytics Project**, where we utilize Python and the powerful Pandas library for data wrangling and visualization. This repository contains the scripts to clean, process, and visualize automotive data, revealing insights into features like **model**, **cylinders**, and **gear type**. Dive in and uncover the power of data analysis! 🚀
 
