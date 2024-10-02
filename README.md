@@ -2,7 +2,7 @@
 
 **Author**: Chance Angelo C. Tan
 
-Welcome to the **Auto Analytics Project**, where we utilize Python and the powerful Pandas library for data wrangling and visualization. This repository contains the scripts to clean, process, and visualize automotive data, revealing insights into features like **model**, **cylinders**, and **gear type**. Dive in and uncover the power of data analysis! 🚀
+Welcome to the **Auto Analytics Project**, where we harness the power of Python and the Pandas library for effective data wrangling and visualization. This repository features scripts designed to clean, process, and visualize automotive data, revealing insights into key features such as **model**, **cylinders**, and **gear type**. Dive in and unlock the potential of data-driven analysis! 🚀
 
 ---
 
@@ -11,11 +11,11 @@ Welcome to the **Auto Analytics Project**, where we utilize Python and the power
 ### 📋 **Problem Description**
 
 #### **Intended Learning Outcomes**
-- Identify the functions incorporated in the **Pandas library**.
-- Apply various codes and techniques to create effective **data wrangling** and **visualization** programs.
+- Master the functions within the **Pandas library** for data analysis.
+- Implement various programming techniques to develop efficient **data wrangling** and **visualization** solutions.
 
 #### **Instructions**
-- Write your Python scripts in Jupyter Notebook to tackle the following problems.
+- Develop your Python scripts in Jupyter Notebook to address the tasks outlined below.
 
 ---
 
@@ -25,56 +25,55 @@ Welcome to the **Auto Analytics Project**, where we utilize Python and the power
 
 #### **PROBLEM 1: Initial Data Exploration**
 - **Task**:
-  - Load the CSV file into a DataFrame named `cars` using Pandas.
-  - Display the first five and last five rows of `cars`.
+  - Load the CSV data into a DataFrame named `cars` using Pandas.
+  - Display the first and last five rows of the `cars` DataFrame.
 
 #### **PROBLEM 2: Advanced Data Manipulation**
 - **Task Details**:
-  1. Save output as `Surname_Pandas-P.py`:
-     - Extract and display the first five rows with odd-numbered columns.
-  2. Save output as `Surname_Pandas-P2.py`:
-     - Find the row for the car model "Mazda RX4".
-     - Determine and display the number of cylinders ('cyl') for "Camaro Z28".
-     - Extract and list cylinders ('cyl') and gear type ('gear') for "Mazda RX4 Wag", "Ford Pantera L", and "Honda Civic".
+  1. Save your work as `Surname_Pandas-P.py`:
+     - Extract and present the first five rows with odd-numbered columns.
+  2. Save your findings as `Surname_Pandas-P2.py`:
+     - Locate the row pertaining to the car model "Mazda RX4".
+     - Retrieve and display the cylinder count ('cyl') for "Camaro Z28".
+     - Extract and summarize the cylinders ('cyl') and gear types ('gear') for "Mazda RX4 Wag", "Ford Pantera L", and "Honda Civic".
 
 ---
 
 ## ⚙️ Setup & Installation
 
-To execute the Python scripts for this project, follow these steps:
+To execute the Python scripts within this project, perform the following steps:
 
 1. **Clone the repository**:
    ```bash
-   https://github.com/TanTan-Angelo/Experiment-3---CompProg
-
+   git clone https://github.com/TanTan-Angelo/Experiment-3---CompProg
 
 pip install pandas jupyter matplotlib
 jupyter notebook
+
 
 import pandas as pd
 
 # PROBLEM 1: Load data into a DataFrame
 cars = pd.read_csv('cars.csv')
-print(cars.head())
-print(cars.tail())
+print(cars.head())  # Display the first five rows
+print(cars.tail())  # Display the last five rows
 
 # PROBLEM 2: Advanced Manipulation
-# a. Odd-numbered columns
+# a. Display rows with odd-numbered columns
 odd_columns = cars.iloc[:, ::2]
 print(odd_columns.head())
 
-# b. Mazda RX4 model
+# b. Display the row for Mazda RX4
 mazda_rx4 = cars[cars['Model'] == 'Mazda RX4']
 print(mazda_rx4)
 
-# c. Cylinders for Camaro Z28
+# c. Display the number of cylinders for Camaro Z28
 camaro = cars[cars['Model'] == 'Camaro Z28']
 print(camaro['cyl'])
 
-# d. Specific models info
+# d. Display cylinders and gear type for specific models
 specific_models = cars[cars['Model'].isin(['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic'])]
 print(specific_models[['Model', 'cyl', 'gear']])
-
 
 
 
