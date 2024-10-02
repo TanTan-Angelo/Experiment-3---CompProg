@@ -15,7 +15,6 @@ Welcome to the **Auto Analytics Project**, where we utilize Python and the power
 - Apply various codes and techniques to create effective **data wrangling** and **visualization** programs.
 
 #### **Instructions**
-- Download the dataset: [Car Dataset](https://example-link-to-dataset.com) 🗂️.
 - Write your Python scripts in Jupyter Notebook to tackle the following problems.
 
 ---
@@ -47,3 +46,35 @@ To execute the Python scripts for this project, follow these steps:
 1. **Clone the repository**:
    ```bash
    https://github.com/TanTan-Angelo/Experiment-3---CompProg
+
+
+pip install pandas jupyter matplotlib
+jupyter notebook
+
+import pandas as pd
+
+# PROBLEM 1: Load data into a DataFrame
+cars = pd.read_csv('cars.csv')
+print(cars.head())
+print(cars.tail())
+
+# PROBLEM 2: Advanced Manipulation
+# a. Odd-numbered columns
+odd_columns = cars.iloc[:, ::2]
+print(odd_columns.head())
+
+# b. Mazda RX4 model
+mazda_rx4 = cars[cars['Model'] == 'Mazda RX4']
+print(mazda_rx4)
+
+# c. Cylinders for Camaro Z28
+camaro = cars[cars['Model'] == 'Camaro Z28']
+print(camaro['cyl'])
+
+# d. Specific models info
+specific_models = cars[cars['Model'].isin(['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic'])]
+print(specific_models[['Model', 'cyl', 'gear']])
+
+
+
+
